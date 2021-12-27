@@ -40,8 +40,8 @@ export function ExpenseForm(props){
     
     const expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
-      date: new Date(userInput.enteredDate)
+      amount: +userInput.enteredAmount,
+      date: new Date(`${userInput.enteredDate}:00:00`)
     }
 
     props.onSaveExpenseData(expenseData)
